@@ -1,0 +1,14 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+<form  class="form" action="/edit_message_post" method="post" enctype="multipart/form-data">
+
+      <div class="form__field">Subject
+      <input type="hidden" name="id" value="{{ data['messageid'] }}"/>
+      <input class="input input--text" type="text" name="subject" value="{{ data['subject'] }}"/></div>
+      <div class="form__field">Date
+      <input class="input" type="date" name="date" value="{{ data['date'] }}" ></div>
+
+      <div class="form__field">Message<textarea class="input input--text" name="message" id="textarea" cols="45" rows="5">{{ data['message'] }}</textarea></div>
+{% endblock %}

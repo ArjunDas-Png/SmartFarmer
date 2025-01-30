@@ -1,0 +1,16 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+<form class="form" action="/add_equipment_post" method="post" enctype="multipart/form-data">
+      <label>Name</label>
+      <input type="text" name="name" class="input input--text" /><br><br>
+
+      <label>Photo: </label>
+      <input class="input" type="file" name="photo" /><br><br>
+      <label>Description </label>
+      <textarea class="input--text input" name="desc" id="textarea" cols="45" rows="5"></textarea><br>
+
+      <label>Price </label>
+      <input type="text" name="price" id="textfield2" class="input--text input" /><br><br>
+{% endblock %}

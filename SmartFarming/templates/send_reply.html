@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<form action="/send_reply_post" method="post">
+    <table>
+        <tr>
+            <td>Reply:</td>
+            <td><input type="hidden" name="id" value="{{ data['complaintid'] }}">
+                <input type="text" name="reply" id=""></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Send"></td>
+            <td><input type="reset" value="Clear"></td>
+        </tr>
+    </table>
+</form>
+
+
+</body>
+
+</html>

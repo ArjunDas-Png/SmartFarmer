@@ -1,0 +1,16 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+<form class="form" action="/add_group_policy_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+
+      <label>Policy Name</label>
+      <input class="input input--text" type="text" name="name" id="textfield" /><br><br>
+      <label>Policy file:</label>
+      <input class="input" type="file" name="pfile" id="fileField" /><br><br>
+      <label>Date:</label>
+      <input class="input" type="date" name="date" id=""><br><br>
+
+      <label>Description</label>
+      <textarea class="input input--text" name="desc" id="textarea" cols="45" rows="5"></textarea><br><br>
+{% endblock %}

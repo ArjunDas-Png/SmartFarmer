@@ -1,0 +1,16 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+    <form class="form" action="/add_crop_post" method="post" enctype="multipart/form-data">
+
+
+    <label>Crop</label>
+    <input class="input input--text" type="text" name="name" id="textfield"/>
+
+    <label>Description</label>
+    <textarea class="input" name="desc" id="textarea" cols="45" rows="5"></textarea>
+    <label for="fileField">Photo:</label>
+    <input class="input" type="file" name="photo" id="fileField"/><br>
+{% endblock content %}
+

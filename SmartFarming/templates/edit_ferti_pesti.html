@@ -1,0 +1,19 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+    <form class="form" action="/edit_f_p_post" method="post" enctype="multipart/form-data">
+
+        <div class="form__field">Name
+            <input type="hidden" name="id" value="{{ data['fpid'] }}"/>
+            <input class="input input--text" type="text" name="name" value="{{ data['name'] }}"/></div>
+
+        <div class="form__field">Photo
+            <img src="{{ data['photo'] }}" alt="" height="50px" width="50px"/><br>
+            <input class="input input--text" type="file" name="photo"/></div>
+
+        <div class="form__field">Description<textarea class="input input--text" name="desc" id="textarea" cols="45"
+                                                      rows="5">{{ data['description'] }}</textarea></div>
+        <div class="form__field">How to Use<textarea class="input input--text" name="howtouse" id="textarea" cols="45"
+                                                     rows="5">{{ data['how_to_use'] }}</textarea></div>
+{% endblock %}

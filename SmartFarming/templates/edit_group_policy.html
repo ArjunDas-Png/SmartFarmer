@@ -1,0 +1,23 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+    <form class="form" action="/edit_group_policy_post" method="post" enctype="multipart/form-data" name="form1"
+          id="form1">
+
+        <div class="form__field">Policy Name
+            <input type="hidden" name="id" value="{{ data['policyid'] }}"/>
+            <input class="input input--text" type="text" name="name" id="textfield" value="{{ data['policy_name'] }}"/>
+        </div>
+        <div class="form__field">Policy file<br><a href="{{ data['policy_file'] }}">Download</a><br><input class="input"
+                                                                                                           type="file"
+                                                                                                           name="pfile"
+                                                                                                           id="fileField"/>
+        </div>
+
+        <div class="form__field">Date
+            <input class="input" type="date" name="date" id="" value="{{ data['date'] }}"></div>
+
+        <div class="form__field">Description<textarea class="input input--text" name="desc" id="textarea" cols="45"
+                                                      rows="5">{{ data['description'] }}</textarea></div>
+{% endblock %}

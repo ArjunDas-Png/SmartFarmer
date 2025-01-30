@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/view_user_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <p>Name : 
+    <input type="text" name="name" id="textfield" />
+    <input type="submit" name="button" id="button" value="Search" />
+  </p>
+  <table width="200" border="1">
+    <tr>
+      <td>S.No</td>
+      <td>Name</td>
+      <td>Gender</td>
+      <td>DOB</td>
+      <td>Phone</td>
+      <td>Place</td>
+      <td>City</td>
+      <td>District</td>
+      <td>State</td>
+      <td>Pin</td>
+      <td>Photo</td>
+{#      <td>&nbsp;</td>#}
+{#      <td>&nbsp;</td>#}
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ i['name'] }}</td>
+      <td>{{ i['gender'] }}</td>
+      <td>{{ i['dob'] }}</td>
+      <td>{{ i['phone'] }}</td>
+      <td>{{ i['place'] }}</td>
+      <td>{{ i['city'] }}</td>
+      <td>{{ i['district'] }}</td>
+      <td>{{ i['state'] }}</td>
+      <td>{{ i['pincode'] }}</td>
+      <td><img src="{{ i['photo'] }}" alt="" height="100px" width="100px"/></td>
+{#      <td><a href="#">Edit</a></td>#}
+{#      <td><a href="#">Delete</a></td>#}
+    </tr>
+      {% endfor %}
+  </table>
+  <p>&nbsp;</p>
+</form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+            <form class="form" method="post" action="/add_agri_offi_post" enctype="multipart/form-data">
+                <div class="form__field">
+                    <label>Name:</label>
+
+                    <input class="input input--text" type="text" name="name" id="textfield"/>
+                </div>
+                <div class="form__field">
+                    Gender :
+
+
+                    <input class="input" type="radio" name="gender" value="F"/>
+                    F
+
+                    <input class="input" type="radio" name="gender" value="M"/>
+                    M
+                    </p></div>
+                <div class="form__field">
+                    DOB : <input type="date" name="dob" id="dob">
+                    <label for="email">E-mail: </label>
+                    <input class="input" type="text" name="email" id="textfield"/>
+                    </div>
+                <div class="form__field">
+                    <p>
+                        <label for="pn">Phone: </label>
+                        <input class="input input--text" type="text" name="pn" id="textfield"/>
+                    </p></div>
+                <div class="form__field">
+                    <p>
+                        <label for="hname">House Name: </label>
+                        <input class="input input--text" type="text" name="hname" id="textfield"/>
+                    </p></div>
+                <div class="form__field">
+                    <p>
+                        <label for="place">Place: </label>
+                        <input class="input input--text" type="text" name="place" id="textfield"/>
+                    </p></div>
+                <div class="form__field">
+                    <p>
+                        <label for="city">City: </label>
+                        <input class="input input--text" type="text" name="city" id="textfield"/>
+                    </p></div>
+                <div class="form__field">
+                    <p>
+                        <label for="district">District: </label>
+                        <input class="input input--text" type="text" name="district" id="textfield"/>
+                    </p></div>
+                <div class="form__field">
+                    <p>
+                        <label for="state">State: </label>
+                        <input class="input input--text" type="text" name="state" id="textfield"/>
+                    </p></div>
+                <div class="form__field">
+                    <p>
+                        <label for="pin">PIN: </label>
+                        <input class="input input--text" type="text" name="pin" id="textfield"/>
+                    </p></div>
+                <div class="form__field">
+                    <p>
+                        <label for="photo">Photo: </label>
+                        <input class="input" type="file" name="photo" id="textfield"/>
+                    </p></div>
+{% endblock %}

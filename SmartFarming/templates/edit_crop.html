@@ -1,0 +1,17 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+<form class="form" action="/edit_crop_post" method="post" enctype="multipart/form-data">
+
+      <div class="form__field">Crop
+      <input type="hidden" name="id" value="{{ data['cropid'] }}"/>
+      <input class="input--text input" type="text" name="name" id="textfield" value="{{ data['name'] }}"/></div>
+
+      <div class="form__field"> >Description
+      <textarea class="input input--text" name="desc" id="textarea" cols="45" rows="5">{{ data['details'] }}</textarea></div>
+
+      <div class="form__field">Photo
+        <img src="{{ data['photo'] }}" alt="" height="50px" width="50px"/><br>
+      <input class="input" type="file" name="photo" id="fileField" /></div>
+{% endblock %}

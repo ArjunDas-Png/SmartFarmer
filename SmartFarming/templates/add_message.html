@@ -1,0 +1,12 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+<form class="form" action="/add_message_post" method="post" enctype="multipart/form-data">
+      <label>Subject</label>
+      <input class="input input--text" type="text" name="subject"/><br><br>
+      <label>Date</label>
+      <input class="input" type="date" name="date" ><br><br>
+      <label>Message</label>
+      <textarea class="input input--text" name="message" id="textarea" cols="45" rows="5"></textarea><br><br>
+{% endblock %}

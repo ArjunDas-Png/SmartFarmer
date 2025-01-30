@@ -1,0 +1,14 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+    <form class="form" action="/add_f_p_post" method="post" enctype="multipart/form-data">
+    <label>Name: </label>
+    <input type="text" name="name" class="input input--text"/><br><br>
+    <label>Photo: </label>
+    <input class="input" type="file" name="photo"/><br><br>
+    <label>Description: </label>
+    <textarea class="input input--text" name="desc" id="textarea" cols="45" rows="5"></textarea><br>
+    <label>How to Use: </label>
+    <textarea class="input input--text" name="howtouse" id="textarea" cols="45" rows="5"></textarea><br><br>
+
+{% endblock content %}

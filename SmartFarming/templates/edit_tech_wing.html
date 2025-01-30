@@ -1,0 +1,59 @@
+{% extends 'form_base.html' %}
+{% block content %}
+
+
+<form class="form" id="form1" name="form1" method="post" enctype="multipart/form-data" action="/edit_tech_wing_post">
+  <div class="form__field">Name:
+      <input type="hidden" name="id" value="{{ data['wingid'] }}"/>
+  <input class="input input--text" type="text" name="name" id="textfield" value="{{ data['name'] }}"/>
+  </div>
+  <div class="form__field">Gender :
+    <label>
+      <input type="radio" class="input" name="gender" value="F" {% if data['gender']=="F" %} checked {% endif %} />
+      F</label>
+    <label>
+      <input class="input" type="radio" name="gender" value="M"  {% if data['gender']=="M" %} checked {% endif %}/>
+      M</label>
+  </div>
+  <div class="form__field">DOB : <input type="date" name="dob" id="dob" value="{{ data['dob'] }}"></div>
+<div class="form__field">
+        <label for="email">E-mail: </label>
+  <input class="input input--text" type="text" name="email" id="textfield" value="{{ data['email'] }}"/>
+  </div>
+  <div class="form__field">
+    <label for="pn">Phone: </label>
+  <input class="input--text input" type="text" name="pn" id="textfield" value="{{ data['phone'] }}" />
+  </div>
+  <div class="form__field">
+    <label for="hname">House Name: </label>
+  <input class="input input--text" type="text" name="hname" id="textfield" value="{{ data['hno_name'] }}"/>
+  </div>
+  <div class="form__field">
+    <label for="place">Place: </label>
+  <input class="input--text input" type="text" name="place" id="textfield" value="{{ data['place'] }}" />
+  </div>
+  <div class="form__field">
+    <label for="city">City: </label>
+  <input class="input input--text" type="text" name="city" id="textfield" value="{{ data['city'] }}"/>
+  </div>
+  <div class="form__field">
+    <label for="district">District: </label>
+  <input class="input--text input" type="text" name="district" id="textfield" value="{{ data['district'] }}" />
+  </div>
+  <div class="form__field">
+    <label for="state">State: </label>
+  <input class="input input--text" type="text" name="state" id="textfield" value="{{ data['state'] }}" />
+  </div>
+  <div class="form__field">
+    <label for="pin">PIN: </label>
+  <input class="input input--text" type="text" name="pin" id="textfield" value="{{ data['pincode'] }}"/>
+  </div>
+  <div class="form__field">
+    <label for="photo">Photo: </label>
+      <img src="{{ data['photo'] }}" alt="" height="100px" width="100px"/><br>
+  <input class="input" type="file" name="photo" id="textfield" />
+  </div>
+
+{% endblock %}
+
+
